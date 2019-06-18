@@ -47,6 +47,7 @@
                   (env "BADGE_AUTH_TOKEN" :default "badge-auth-token")
 
      :app-version (app-version)
+     :max-heap    (.maxMemory (Runtime/getRuntime))
      :num-cpus    num-cpus
      :num-threads (* num-cpus
                      (env "THREAD_MUTIPLIER" :default 8 :parse u/parse-int))}))

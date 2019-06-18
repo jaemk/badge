@@ -30,4 +30,4 @@
   :bin {:name "badge"
         :bin-path "bin"
         :jvm-opts ["-server" "-Dfile.encoding=utf-8" "$JVM_OPTS"]
-        :custom-preamble "#!/bin/sh\nexec java  -jar $0 \"$@\"\n"})
+        :custom-preamble "#!/bin/sh\nexec java {{jvm-opts}} -jar $0 \"$@\"\n"})

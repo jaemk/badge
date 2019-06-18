@@ -167,6 +167,7 @@
   [& _args]
   (do
     (t/info "checking config"
-            {:num-threads (config/v :num-threads)})
+            {:num-threads (config/v :num-threads)
+             :max-heap (config/v :max-heap)})
     (start-repl!)
     (start-server!)))
