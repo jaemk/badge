@@ -43,7 +43,8 @@
      :keep-alive-client-timeout-ms
                   (env "KEEP_ALIVE_CLIENT_TIMEOUT_MS" :default 5000 :parse u/parse-int)
      :badge-dir   (env "BADGE_DIR" :default "badges")
-     :auth-token  (env "AUTH_TOKEN" :default "badge-auth-token")
+     :badge-auth-token
+                  (env "BADGE_AUTH_TOKEN" :default "badge-auth-token")
 
      :app-version (app-version)
      :num-cpus    num-cpus

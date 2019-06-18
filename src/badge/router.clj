@@ -9,8 +9,8 @@
 
 
 (defn require-auth-token [r handler]
-  (let [token (-> r :headers (get "x-badge-auth"))]
-    (if-not (= token (config/v :auth-token))
+  (let [token (-> r :headers (get "x-badge-auth-token"))]
+    (if-not (= token (config/v :badge-auth-token))
       (u/ex-unauthorized! :e-msg (format "invalid auth token: %s" token))
       (handler))))
 
