@@ -1,6 +1,6 @@
 # badge
 
-> A simple item storage system
+> shields.io caching service
 
 ## Build/Installation
 
