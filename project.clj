@@ -1,4 +1,4 @@
-(defproject badge "0.3.0"
+(defproject badge "0.3.1"
   :description "badge caching service"
   :url "https://github.com/jaemk/badge"
   :license {:name "Eclipse Public License"
