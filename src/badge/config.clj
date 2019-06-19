@@ -2,6 +2,7 @@
   (:require [taoensso.timbre :as t]
             [cheshire.core :as json]
             [cheshire.generate :refer [add-encoder encode-str remove-encoder]]
+            [clojure.string :as string]
             [badge.utils :as u])
   (:import (java.time Instant)
            (java.time ZoneId)
@@ -44,7 +45,7 @@
                   (env "KEEP_ALIVE_CLIENT_TIMEOUT_MS" :default 5000 :parse u/parse-int)
      :badge-dir   (env "BADGE_DIR" :default "badges")
      :badge-auth-token
-                  (env "BADGE_AUTH_TOKEN" :default "badge-auth-token")
+                  (env "BADGE_AUTH_TOKEN" :default "badge-auth-token" :parse string/trim)
 
      :app-version (app-version)
      :max-heap    (.maxMemory (Runtime/getRuntime))
