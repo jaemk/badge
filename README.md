@@ -1,5 +1,7 @@
 # badge
 
+**NOTE**: Development has been moved back to https://github.com/jaemk/badge-cache
+
 > shields.io caching service
 
 ## Build/Installation
